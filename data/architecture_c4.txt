@@ -1,0 +1,81 @@
+============================================================
+  C4 Model -- Level 1: System Context
+============================================================
+
+System: Library Service
+Base Package: com.library
+
+Description:
+  The Library Service is a Spring Boot application that
+  exposes 0 REST endpoint group(s) and manages
+  10 Java classes across
+  5 architectural layers.
+
+External Actors:
+  [Person] End User / Client Application
+    -- Sends HTTP requests to REST controllers
+
+External Systems:
+  [System] Relational Database (JPA/Hibernate)
+
+Relationships:
+  Client      --[HTTPS/JSON]-->  Library Service
+  Library Service  --[data]-->  Relational Database (JPA/Hibernate)
+
+============================================================
+  C4 Model -- Level 2: Container
+============================================================
+
+Containers:
+
+  [Container: Spring Boot Application]  App-service
+    Technology : Java {}, Spring Boot
+    Description: Main application container. Hosts
+                 0 controller(s),
+                 1 service(s),
+                 3 repository/repositories.
+
+  [Container: Database]  relational-db
+    Technology : PostgreSQL / MySQL / H2 (via JPA/Hibernate)
+    Description: Persistent storage for
+                 4 entity type(s).
+
+Container Relationships:
+  Client        --[HTTPS/REST/JSON]-->  App-service
+  App-service  --[JDBC/JPA]-->   relational-db
+
+============================================================
+  C4 Model -- Level 3: Component (Business Layer)
+============================================================
+
+Layer: Business
+Classes: 1
+Packages: com.library.service
+
+Components:
+  [Component]  LibraryService
+               Package: com.library.service
+               Methods: 11  Detection: naming (medium)
+
+
+============================================================
+  C4 Model -- Level 3: Component (Persistence Layer)
+============================================================
+
+Layer: Persistence
+Classes: 3
+Packages: com.library.repository
+
+Components:
+  [Component]  BookRepository
+               Package: com.library.repository
+               Methods: 8  Detection: naming (medium)
+
+  [Component]  LoanRepository
+               Package: com.library.repository
+               Methods: 7  Detection: naming (medium)
+
+  [Component]  MemberRepository
+               Package: com.library.repository
+               Methods: 6  Detection: naming (medium)
+

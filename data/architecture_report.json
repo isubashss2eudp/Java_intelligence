@@ -1,0 +1,248 @@
+{
+  "base_package": "com.library",
+  "stats": {
+    "total_classes": 10,
+    "detected_classes": 9,
+    "unknown_classes": 1,
+    "detection_rate": 0.9,
+    "layer_count": 5,
+    "module_count": 4,
+    "role_count": 5
+  },
+  "layers": [
+    {
+      "name": "Business",
+      "roles": [
+        "service",
+        "component"
+      ],
+      "class_count": 1,
+      "packages": [
+        "com.library.service"
+      ],
+      "inbound_deps": 0,
+      "outbound_deps": 0
+    },
+    {
+      "name": "Persistence",
+      "roles": [
+        "repository"
+      ],
+      "class_count": 3,
+      "packages": [
+        "com.library.repository"
+      ],
+      "inbound_deps": 0,
+      "outbound_deps": 0
+    },
+    {
+      "name": "Data Model",
+      "roles": [
+        "entity"
+      ],
+      "class_count": 4,
+      "packages": [
+        "com.library.model"
+      ],
+      "inbound_deps": 0,
+      "outbound_deps": 0
+    },
+    {
+      "name": "Cross-cutting",
+      "roles": [
+        "exception",
+        "utility"
+      ],
+      "class_count": 1,
+      "packages": [
+        "com.library.util"
+      ],
+      "inbound_deps": 0,
+      "outbound_deps": 0
+    },
+    {
+      "name": "Unknown",
+      "roles": [
+        "unknown"
+      ],
+      "class_count": 1,
+      "packages": [
+        "com.library"
+      ],
+      "inbound_deps": 0,
+      "outbound_deps": 0
+    }
+  ],
+  "modules": [
+    {
+      "name": "model",
+      "root_package": "com.library.model",
+      "class_count": 4,
+      "roles": [
+        "entity"
+      ],
+      "is_full_stack": false
+    },
+    {
+      "name": "repository",
+      "root_package": "com.library.repository",
+      "class_count": 3,
+      "roles": [
+        "repository"
+      ],
+      "is_full_stack": false
+    },
+    {
+      "name": "service",
+      "root_package": "com.library.service",
+      "class_count": 1,
+      "roles": [
+        "service"
+      ],
+      "is_full_stack": false
+    },
+    {
+      "name": "util",
+      "root_package": "com.library.util",
+      "class_count": 1,
+      "roles": [
+        "utility"
+      ],
+      "is_full_stack": false
+    }
+  ],
+  "spring_patterns": {
+    "has_spring_boot_main": false,
+    "rest_controller_count": 0,
+    "jpa_entity_count": 4,
+    "spring_data_repo_count": 0,
+    "has_security": false,
+    "has_scheduling": false,
+    "has_async": false,
+    "entry_point_class": "",
+    "base_package": "",
+    "patterns_detected": [
+      "JPA/ORM: 4 entity class(es)"
+    ]
+  },
+  "roles": {
+    "unknown": [
+      {
+        "class_name": "LibraryApp",
+        "package": "com.library",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\LibraryApp.java",
+        "role": "unknown",
+        "layer": "Unknown",
+        "confidence": "low",
+        "detection_method": "unknown",
+        "annotations": []
+      }
+    ],
+    "entity": [
+      {
+        "class_name": "Author",
+        "package": "com.library.model",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Author.java",
+        "role": "entity",
+        "layer": "Data Model",
+        "confidence": "low",
+        "detection_method": "package",
+        "annotations": [
+          "Override"
+        ]
+      },
+      {
+        "class_name": "Book",
+        "package": "com.library.model",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Book.java",
+        "role": "entity",
+        "layer": "Data Model",
+        "confidence": "low",
+        "detection_method": "package",
+        "annotations": [
+          "Override"
+        ]
+      },
+      {
+        "class_name": "Loan",
+        "package": "com.library.model",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Loan.java",
+        "role": "entity",
+        "layer": "Data Model",
+        "confidence": "low",
+        "detection_method": "package",
+        "annotations": [
+          "Override"
+        ]
+      },
+      {
+        "class_name": "Member",
+        "package": "com.library.model",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Member.java",
+        "role": "entity",
+        "layer": "Data Model",
+        "confidence": "low",
+        "detection_method": "package",
+        "annotations": [
+          "Override"
+        ]
+      }
+    ],
+    "repository": [
+      {
+        "class_name": "BookRepository",
+        "package": "com.library.repository",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\BookRepository.java",
+        "role": "repository",
+        "layer": "Persistence",
+        "confidence": "medium",
+        "detection_method": "naming",
+        "annotations": []
+      },
+      {
+        "class_name": "LoanRepository",
+        "package": "com.library.repository",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\LoanRepository.java",
+        "role": "repository",
+        "layer": "Persistence",
+        "confidence": "medium",
+        "detection_method": "naming",
+        "annotations": []
+      },
+      {
+        "class_name": "MemberRepository",
+        "package": "com.library.repository",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\MemberRepository.java",
+        "role": "repository",
+        "layer": "Persistence",
+        "confidence": "medium",
+        "detection_method": "naming",
+        "annotations": []
+      }
+    ],
+    "service": [
+      {
+        "class_name": "LibraryService",
+        "package": "com.library.service",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\service\\LibraryService.java",
+        "role": "service",
+        "layer": "Business",
+        "confidence": "medium",
+        "detection_method": "naming",
+        "annotations": []
+      }
+    ],
+    "utility": [
+      {
+        "class_name": "LibraryLogger",
+        "package": "com.library.util",
+        "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\util\\LibraryLogger.java",
+        "role": "utility",
+        "layer": "Cross-cutting",
+        "confidence": "low",
+        "detection_method": "package",
+        "annotations": []
+      }
+    ]
+  }
+}

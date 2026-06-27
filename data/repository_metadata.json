@@ -1,0 +1,305 @@
+[
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\LibraryApp.java",
+    "package": "com.library",
+    "imports": [
+      "com.library.model",
+      "com.library.repository.BookRepository",
+      "com.library.repository.LoanRepository",
+      "com.library.repository.MemberRepository",
+      "com.library.service.LibraryService",
+      "com.library.util.LibraryLogger",
+      "java.util.List"
+    ],
+    "annotations": [],
+    "classes": [
+      "LibraryApp"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "main"
+    ],
+    "lines_of_code": 72,
+    "content_hash": "e4d2a64c487f718abbf29d82a950fd7a"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Author.java",
+    "package": "com.library.model",
+    "imports": [],
+    "annotations": [
+      "Override"
+    ],
+    "classes": [
+      "Author"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "Author",
+      "getId",
+      "getFirstName",
+      "getLastName",
+      "getEmail",
+      "getFullName",
+      "toString"
+    ],
+    "lines_of_code": 27,
+    "content_hash": "9ecaf55da72970d061f8943d0b05b118"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Book.java",
+    "package": "com.library.model",
+    "imports": [],
+    "annotations": [
+      "Override"
+    ],
+    "classes": [
+      "Book"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "Book",
+      "getId",
+      "getTitle",
+      "getIsbn",
+      "getAuthor",
+      "getGenre",
+      "getAvailableCopies",
+      "isAvailable",
+      "decrementCopies",
+      "incrementCopies",
+      "toString"
+    ],
+    "lines_of_code": 42,
+    "content_hash": "2ac7bd888c822e8d1978090ff1ff2311"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Genre.java",
+    "package": "com.library.model",
+    "imports": [],
+    "annotations": [],
+    "classes": [],
+    "interfaces": [],
+    "enums": [
+      "Genre"
+    ],
+    "methods": [],
+    "lines_of_code": 13,
+    "content_hash": "66dcd01d1f9877aa5c28f545981e36e5"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Loan.java",
+    "package": "com.library.model",
+    "imports": [
+      "java.time.LocalDate"
+    ],
+    "annotations": [
+      "Override"
+    ],
+    "classes": [
+      "Loan"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "Loan",
+      "getId",
+      "getBook",
+      "getMember",
+      "getLoanDate",
+      "getDueDate",
+      "getReturnDate",
+      "getStatus",
+      "returnBook",
+      "isOverdue",
+      "toString"
+    ],
+    "lines_of_code": 46,
+    "content_hash": "05ac78632bff90ff24841481fd870a26"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\LoanStatus.java",
+    "package": "com.library.model",
+    "imports": [],
+    "annotations": [],
+    "classes": [],
+    "interfaces": [],
+    "enums": [
+      "LoanStatus"
+    ],
+    "methods": [],
+    "lines_of_code": 9,
+    "content_hash": "b013e2b3a9ab1fb12ad45be3e7787823"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Member.java",
+    "package": "com.library.model",
+    "imports": [
+      "java.time.LocalDate"
+    ],
+    "annotations": [
+      "Override"
+    ],
+    "classes": [
+      "Member"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "Member",
+      "getId",
+      "getName",
+      "getEmail",
+      "getMembershipDate",
+      "isActive",
+      "setActive",
+      "toString"
+    ],
+    "lines_of_code": 33,
+    "content_hash": "b5ac3ebae5b1d49960419140e84585ab"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\BookRepository.java",
+    "package": "com.library.repository",
+    "imports": [
+      "com.library.model.Book",
+      "com.library.model.Genre",
+      "java.util.ArrayList",
+      "java.util.List",
+      "java.util.Optional",
+      "java.util.stream.Collectors"
+    ],
+    "annotations": [],
+    "classes": [
+      "BookRepository"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "save",
+      "findById",
+      "findByIsbn",
+      "findAll",
+      "findByGenre",
+      "findAvailable",
+      "nextId",
+      "delete"
+    ],
+    "lines_of_code": 52,
+    "content_hash": "ebedfa113c1a0526a14936ae5157841c"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\LoanRepository.java",
+    "package": "com.library.repository",
+    "imports": [
+      "com.library.model.Loan",
+      "com.library.model.LoanStatus",
+      "java.util.ArrayList",
+      "java.util.List",
+      "java.util.Optional",
+      "java.util.stream.Collectors"
+    ],
+    "annotations": [],
+    "classes": [
+      "LoanRepository"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "save",
+      "findById",
+      "findByMemberId",
+      "findActiveByMemberId",
+      "findOverdue",
+      "findAll",
+      "nextId"
+    ],
+    "lines_of_code": 50,
+    "content_hash": "f93e99a08f19b9594484ca58f2833ad1"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\MemberRepository.java",
+    "package": "com.library.repository",
+    "imports": [
+      "com.library.model.Member",
+      "java.util.ArrayList",
+      "java.util.List",
+      "java.util.Optional"
+    ],
+    "annotations": [],
+    "classes": [
+      "MemberRepository"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "save",
+      "findById",
+      "findByEmail",
+      "findAll",
+      "findActive",
+      "nextId"
+    ],
+    "lines_of_code": 38,
+    "content_hash": "712d3f1683ad27c55e0248324a314fef"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\service\\LibraryService.java",
+    "package": "com.library.service",
+    "imports": [
+      "com.library.model",
+      "com.library.repository.BookRepository",
+      "com.library.repository.LoanRepository",
+      "com.library.repository.MemberRepository",
+      "com.library.util.LibraryLogger",
+      "java.util.List",
+      "java.util.Optional"
+    ],
+    "annotations": [],
+    "classes": [
+      "LibraryService"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "LibraryService",
+      "addBook",
+      "findBook",
+      "searchByGenre",
+      "getAvailableBooks",
+      "registerMember",
+      "findMember",
+      "borrowBook",
+      "returnBook",
+      "getOverdueLoans",
+      "getMemberLoans"
+    ],
+    "lines_of_code": 113,
+    "content_hash": "72c3f49dcd1af319670b9ef56e674409"
+  },
+  {
+    "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\util\\LibraryLogger.java",
+    "package": "com.library.util",
+    "imports": [
+      "java.time.LocalDateTime",
+      "java.time.format.DateTimeFormatter",
+      "java.util.ArrayList",
+      "java.util.List"
+    ],
+    "annotations": [],
+    "classes": [
+      "LibraryLogger"
+    ],
+    "interfaces": [],
+    "enums": [],
+    "methods": [
+      "log",
+      "getLogs",
+      "printAll"
+    ],
+    "lines_of_code": 27,
+    "content_hash": "11d8945255af67ae93816e98f8de287c"
+  }
+]

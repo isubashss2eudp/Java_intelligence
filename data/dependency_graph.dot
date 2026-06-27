@@ -1,0 +1,62 @@
+digraph java_dependencies {
+  rankdir="TB";
+  graph [fontname="Helvetica", fontsize=12];
+  node  [shape=box, style=filled, fontname="Helvetica", fontsize=10];
+  edge  [fontname="Helvetica", fontsize=8];
+
+  "LibraryApp" [label="LibraryApp
+[unknown]
+com.library", fillcolor="lightgray"];
+  "Author" [label="Author
+[unknown]
+com.library.model", fillcolor="lightgray"];
+  "Book" [label="Book
+[unknown]
+com.library.model", fillcolor="lightgray"];
+  "Genre" [label="Genre
+[unknown]
+com.library.model", fillcolor="lightgray"];
+  "Loan" [label="Loan
+[unknown]
+com.library.model", fillcolor="lightgray"];
+  "LoanStatus" [label="LoanStatus
+[unknown]
+com.library.model", fillcolor="lightgray"];
+  "Member" [label="Member
+[unknown]
+com.library.model", fillcolor="lightgray"];
+  "BookRepository" [label="BookRepository
+[unknown]
+com.library.repository", fillcolor="lightgray"];
+  "LoanRepository" [label="LoanRepository
+[unknown]
+com.library.repository", fillcolor="lightgray"];
+  "MemberRepository" [label="MemberRepository
+[unknown]
+com.library.repository", fillcolor="lightgray"];
+  "LibraryService" [label="LibraryService
+[unknown]
+com.library.service", fillcolor="lightgray"];
+  "LibraryLogger" [label="LibraryLogger
+[unknown]
+com.library.util", fillcolor="lightgray"];
+
+  "LibraryApp" -> "BookRepository" [style="dashed", color="gray", label="import"];
+  "LibraryApp" -> "LoanRepository" [style="dashed", color="gray", label="import"];
+  "LibraryApp" -> "MemberRepository" [style="dashed", color="gray", label="import"];
+  "LibraryApp" -> "LibraryService" [style="dashed", color="gray", label="import"];
+  "LibraryApp" -> "LibraryLogger" [style="dashed", color="gray", label="import"];
+  "Book" -> "Author" [style="bold", color="darkblue", label="constructor_injection"];
+  "Book" -> "Genre" [style="bold", color="darkblue", label="constructor_injection"];
+  "Loan" -> "Book" [style="bold", color="darkblue", label="constructor_injection"];
+  "Loan" -> "Member" [style="bold", color="darkblue", label="constructor_injection"];
+  "BookRepository" -> "Book" [style="dashed", color="gray", label="import"];
+  "BookRepository" -> "Genre" [style="dashed", color="gray", label="import"];
+  "LoanRepository" -> "Loan" [style="dashed", color="gray", label="import"];
+  "LoanRepository" -> "LoanStatus" [style="dashed", color="gray", label="import"];
+  "MemberRepository" -> "Member" [style="dashed", color="gray", label="import"];
+  "LibraryService" -> "BookRepository" [style="bold", color="darkblue", label="constructor_injection"];
+  "LibraryService" -> "LoanRepository" [style="bold", color="darkblue", label="constructor_injection"];
+  "LibraryService" -> "MemberRepository" [style="bold", color="darkblue", label="constructor_injection"];
+  "LibraryService" -> "LibraryLogger" [style="bold", color="darkblue", label="constructor_injection"];
+}

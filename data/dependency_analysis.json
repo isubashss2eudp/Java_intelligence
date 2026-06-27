@@ -1,0 +1,107 @@
+{
+  "circular_dependencies": [],
+  "orphan_classes": [],
+  "highly_coupled": [
+    {
+      "class_name": "LibraryApp",
+      "Ca": 0,
+      "Ce": 5,
+      "instability": 1.0,
+      "highly_coupled": true
+    },
+    {
+      "class_name": "LibraryService",
+      "Ca": 1,
+      "Ce": 4,
+      "instability": 0.8,
+      "highly_coupled": true
+    }
+  ],
+  "layer_violations": [],
+  "coupling_metrics": [
+    {
+      "class_name": "LibraryApp",
+      "Ca": 0,
+      "Ce": 5,
+      "instability": 1.0,
+      "highly_coupled": true
+    },
+    {
+      "class_name": "LibraryService",
+      "Ca": 1,
+      "Ce": 4,
+      "instability": 0.8,
+      "highly_coupled": true
+    },
+    {
+      "class_name": "Book",
+      "Ca": 2,
+      "Ce": 2,
+      "instability": 0.5,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "BookRepository",
+      "Ca": 2,
+      "Ce": 2,
+      "instability": 0.5,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "LoanRepository",
+      "Ca": 2,
+      "Ce": 2,
+      "instability": 0.5,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "Loan",
+      "Ca": 1,
+      "Ce": 2,
+      "instability": 0.667,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "MemberRepository",
+      "Ca": 2,
+      "Ce": 1,
+      "instability": 0.333,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "Genre",
+      "Ca": 2,
+      "Ce": 0,
+      "instability": 0.0,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "Member",
+      "Ca": 2,
+      "Ce": 0,
+      "instability": 0.0,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "LibraryLogger",
+      "Ca": 2,
+      "Ce": 0,
+      "instability": 0.0,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "Author",
+      "Ca": 1,
+      "Ce": 0,
+      "instability": 0.0,
+      "highly_coupled": false
+    },
+    {
+      "class_name": "LoanStatus",
+      "Ca": 1,
+      "Ce": 0,
+      "instability": 0.0,
+      "highly_coupled": false
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# Core LangChain stack
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-chroma>=0.2.0
+langchain-huggingface>=0.1.0
+
+# LLM providers — install the one(s) you need
+langchain-google-genai>=2.0.0   # Gemini  (LLM_PROVIDER=gemini)
+langchain-openai>=0.3.0         # GPT-4o, GPT-4.1, o3, o4-mini  (LLM_PROVIDER=openai)
+langchain-anthropic>=0.3.0      # Claude Sonnet/Opus/Haiku  (LLM_PROVIDER=anthropic)
+
+# Embedding model backend
+sentence-transformers>=3.0.0
+torch>=2.0.0
+
+# Vector store
+chromadb>=0.6.0
+
+# Java AST parsing
+tree-sitter>=0.23.0
+tree-sitter-java>=0.23.0
+
+# BM25 hybrid search
+rank-bm25>=0.2.2
+
+# LLM providers
+google-generativeai>=0.8.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# Documentation generation (run.py user-profile → .docx report)
+python-docx>=1.1.0
+
+# Phase 9: Enterprise Platform
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+alembic>=1.14.0
+python-jose[cryptography]>=3.3.0
+passlib>=1.7.4
+python-multipart>=0.0.20
+pydantic-settings>=2.0.0
+pydantic[email]>=2.0.0
+httpx>=0.28.0

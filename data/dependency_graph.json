@@ -1,0 +1,233 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "name": "java_dependency_graph"
+  },
+  "nodes": [
+    {
+      "package": "com.library",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\LibraryApp.java",
+      "color": "#DFE6E9",
+      "id": "LibraryApp"
+    },
+    {
+      "package": "com.library.model",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Author.java",
+      "color": "#DFE6E9",
+      "id": "Author"
+    },
+    {
+      "package": "com.library.model",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Book.java",
+      "color": "#DFE6E9",
+      "id": "Book"
+    },
+    {
+      "package": "com.library.model",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Genre.java",
+      "color": "#DFE6E9",
+      "id": "Genre"
+    },
+    {
+      "package": "com.library.model",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Loan.java",
+      "color": "#DFE6E9",
+      "id": "Loan"
+    },
+    {
+      "package": "com.library.model",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\LoanStatus.java",
+      "color": "#DFE6E9",
+      "id": "LoanStatus"
+    },
+    {
+      "package": "com.library.model",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Member.java",
+      "color": "#DFE6E9",
+      "id": "Member"
+    },
+    {
+      "package": "com.library.repository",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\BookRepository.java",
+      "color": "#DFE6E9",
+      "id": "BookRepository"
+    },
+    {
+      "package": "com.library.repository",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\LoanRepository.java",
+      "color": "#DFE6E9",
+      "id": "LoanRepository"
+    },
+    {
+      "package": "com.library.repository",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\MemberRepository.java",
+      "color": "#DFE6E9",
+      "id": "MemberRepository"
+    },
+    {
+      "package": "com.library.service",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\service\\LibraryService.java",
+      "color": "#DFE6E9",
+      "id": "LibraryService"
+    },
+    {
+      "package": "com.library.util",
+      "class_type": "unknown",
+      "annotations": [],
+      "file_path": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\util\\LibraryLogger.java",
+      "color": "#DFE6E9",
+      "id": "LibraryLogger"
+    }
+  ],
+  "edges": [
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\LibraryApp.java",
+      "line": 4,
+      "source": "LibraryApp",
+      "target": "BookRepository"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\LibraryApp.java",
+      "line": 5,
+      "source": "LibraryApp",
+      "target": "LoanRepository"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\LibraryApp.java",
+      "line": 6,
+      "source": "LibraryApp",
+      "target": "MemberRepository"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\LibraryApp.java",
+      "line": 7,
+      "source": "LibraryApp",
+      "target": "LibraryService"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\LibraryApp.java",
+      "line": 8,
+      "source": "LibraryApp",
+      "target": "LibraryLogger"
+    },
+    {
+      "dep_type": "constructor_injection",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Book.java",
+      "line": 11,
+      "source": "Book",
+      "target": "Author"
+    },
+    {
+      "dep_type": "constructor_injection",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Book.java",
+      "line": 11,
+      "source": "Book",
+      "target": "Genre"
+    },
+    {
+      "dep_type": "constructor_injection",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Loan.java",
+      "line": 14,
+      "source": "Loan",
+      "target": "Book"
+    },
+    {
+      "dep_type": "constructor_injection",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\model\\Loan.java",
+      "line": 14,
+      "source": "Loan",
+      "target": "Member"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\BookRepository.java",
+      "line": 3,
+      "source": "BookRepository",
+      "target": "Book"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\BookRepository.java",
+      "line": 4,
+      "source": "BookRepository",
+      "target": "Genre"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\LoanRepository.java",
+      "line": 3,
+      "source": "LoanRepository",
+      "target": "Loan"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\LoanRepository.java",
+      "line": 4,
+      "source": "LoanRepository",
+      "target": "LoanStatus"
+    },
+    {
+      "dep_type": "import",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\repository\\MemberRepository.java",
+      "line": 3,
+      "source": "MemberRepository",
+      "target": "Member"
+    },
+    {
+      "dep_type": "constructor_injection",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\service\\LibraryService.java",
+      "line": 21,
+      "source": "LibraryService",
+      "target": "BookRepository"
+    },
+    {
+      "dep_type": "constructor_injection",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\service\\LibraryService.java",
+      "line": 21,
+      "source": "LibraryService",
+      "target": "LoanRepository"
+    },
+    {
+      "dep_type": "constructor_injection",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\service\\LibraryService.java",
+      "line": 21,
+      "source": "LibraryService",
+      "target": "MemberRepository"
+    },
+    {
+      "dep_type": "constructor_injection",
+      "source_file": "C:\\Users\\mfi1cob\\Downloads\\library-app\\library-app\\src\\main\\java\\com\\library\\service\\LibraryService.java",
+      "line": 21,
+      "source": "LibraryService",
+      "target": "LibraryLogger"
+    }
+  ]
+}

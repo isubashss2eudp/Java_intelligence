@@ -1,0 +1,27 @@
+{
+  "base_package": "",
+  "stats": {
+    "total_classes": 0,
+    "detected_classes": 0,
+    "unknown_classes": 0,
+    "detection_rate": 0.0,
+    "layer_count": 0,
+    "module_count": 0,
+    "role_count": 0
+  },
+  "layers": [],
+  "modules": [],
+  "spring_patterns": {
+    "has_spring_boot_main": false,
+    "rest_controller_count": 0,
+    "jpa_entity_count": 0,
+    "spring_data_repo_count": 0,
+    "has_security": false,
+    "has_scheduling": false,
+    "has_async": false,
+    "entry_point_class": "",
+    "base_package": "",
+    "patterns_detected": []
+  },
+  "roles": {}
+}
